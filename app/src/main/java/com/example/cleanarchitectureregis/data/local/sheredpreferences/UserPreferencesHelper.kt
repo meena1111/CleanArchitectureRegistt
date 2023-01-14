@@ -1,4 +1,9 @@
 package com.example.cleanarchitectureregis.data.local.sheredpreferences
+
+import android.content.Context
+import android.content.SharedPreferences
+
+
 class UserPreferenceHelper(context: Context) {
 
     private val sharedPreferences: SharedPreferences =
@@ -24,6 +29,7 @@ class UserPreferenceHelper(context: Context) {
         get() = sharedPreferences.getString("name", "")
         set(value) = sharedPreferences.edit().putString("name", value).apply()
 
-    var surname: String?
-        get() = sharedPreferences.getString("surname", "")
-        set(value) = sharedPreferences.edit().putString("surname", value).apply()
+    var lastname: String?
+        get() = sharedPreferences.getString("lastname", "")
+        set(value) = sharedPreferences.edit().putString("lastname", value).apply()
+}

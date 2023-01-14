@@ -1,6 +1,10 @@
 package com.example.cleanarchitectureregis.presentation.ui.activity
 
+import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
+import com.example.cleanarchitectureregis.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -9,7 +13,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(
+            R
+                .layout.activity_main
+        )
         setupNavigation()
     }
 
@@ -26,5 +33,4 @@ class MainActivity : AppCompatActivity() {
         }
         navController.graph = navGraph
     }
-}
 }
